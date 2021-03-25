@@ -11,40 +11,32 @@
 //Input utente, inserire una parola
 
 var parolaInseritaUno = prompt("Inserisci una parola", "Inserisci: ");
-var parolaInseritaDue = prompt("Inserisci una parola", "Inserisci: ");
-
-parolaInseritaUno = parolaInseritaUno.toString(parolaInseritaUno);
-parolaInseritaDue = parolaInseritaDue.toString(parolaInseritaDue);
-
-
 
 
 // Il tutto avverrà in una funzione che prende come argomento le 2 parole di input
 
 
-palindromaFunzione(parolaInseritaUno, parolaInseritaDue);
+var parolaDaConfrontare = palindromaFunzione(parolaInseritaUno);
 
 
-function palindromaFunzione(primaParola, secondaParola) {
+if (parolaDaConfrontare == parolaInseritaUno) {
+    alert("La parola è palindroma!");
+} else {
+    alert("La parola NON è palindroma!");
+}
 
-    var parolaCorrenteUno;
-    var parolaCorrenteDue;
-    for ( var i = 0; i < primaParola.length; i++) {
 
-        parolaCorrenteUno = parolaCorrenteUno + primaParola[i];
+function palindromaFunzione(primaParola) {
+
+    var parolaCorrenteUno = "";
+
+    for ( var j = primaParola.length - 1; j >= 0; j--) {
+
+        parolaCorrenteUno = parolaCorrenteUno + primaParola[j];
     }
-    console.log(parolaInseritaUno);
-
-    for ( var j = secondaParola.length; j >= 0; j--) {
-
-        parolaCorrenteDue = parolaCorrenteDue + secondaParola[j];
-    }
-    console.log(parolaCorrenteDue);
+    console.log(parolaCorrenteUno);
 
     var messaggio;
 
-    // if (parolaCorrenteUno === parolaCorrenteDue) {
-    //     messaggio = "Le due parole sono palindrome";
-    // }
-
+    return parolaCorrenteUno;
 }
