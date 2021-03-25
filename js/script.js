@@ -18,8 +18,6 @@ parolaInseritaDue = parolaInseritaDue.toString(parolaInseritaDue);
 
 
 
-// RICAPITOLANDO SCAN CON IL WHILE [presupposto del ciclo sarà j=0; j < parola1.length && k = parola2.length; k > 0; k--] 
-// CONDIZIONE DI UGUAGLIANZA if (parola1[j] == parola2[k]) {j++; k--}  altrimenti stampa errore.
 
 // Il tutto avverrà in una funzione che prende come argomento le 2 parole di input
 
