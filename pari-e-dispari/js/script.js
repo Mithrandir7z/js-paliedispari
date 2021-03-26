@@ -3,28 +3,33 @@
 // Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione) Dichiariamo chi ha vinto.
 
 
-//generare 2 numeri in 2 variabili
-var generatoUtente;
-var generatoComputer;
+//chiedo se scegli pari o dispari
+var utentePariODispari = prompt("Scegli pari o dispari");
+
+//chiedo un numero da 1 a 5
+var numeroUtente = parseInt( prompt("Dimmi un numero da 1 a 5") );
+
+//generare un numero dal computer da 1 a 5
+numeroComputer = getRandomInteger();
 
 
-valutaNumeri(generatoUtente, generatoComputer);
+function getRandomInteger() {
+
+    numeroGenerato = Math.floor(Math.random() * 5) + 1;
+
+    return numeroGenerato;
+}
 
 
-function valutaNumeri (numeroUtente, numeroComputer) {
+function valutaPariODispari(numeroDaValutare) {
+    var risultato;
 
-    numeroUtente = Math.floor(Math.random() * 5) + 1;
-    console.log("numero utente", numeroUtente);
 
-    numeroComputer = Math.floor(Math.random() * 5) + 1;
-    console.log("numero computer", numeroComputer);
-
-    //confrontare quale tra i due è il maggiore
-
-    if (numeroUtente > numeroComputer) {
-        alert("hai vinto!");
+    if ( numeroDaValutare % 2 == 0 ) {
+        risultato = "pari";
     } else {
-        alert("ha vinto il computer :(");
+        risultato = "dispari";
     }
+
 
 }
